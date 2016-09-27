@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+group = 'de.germanspacebuild'
+version = '1.0-SNAPSHOT'
+
+description = ""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = "de.germanspacebuild.gatesim.GateSim"
+
+project.ext.lwjglVersion = "3.0.0"
+
+
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'de.germanspacebuild.gatesim.GateSim'
+    }
+}
+
+run {
+    systemProperty 'java.library.path', 'lib/natives'
+}
+
+dependencies {
+    compile "org.lwjgl:lwjgl:${lwjglVersion}"
+    compile "org.lwjgl:lwjgl-platform:${lwjglVersion}:natives-windows"
+    compile "org.lwjgl:lwjgl-platform:${lwjglVersion}:natives-linux"
+    compile "org.lwjgl:lwjgl-platform:${lwjglVersion}:natives-osx"
+    compile group: 'org.joml', name: 'joml', version: '1.8.3'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.6.2'
+    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+
+
+}
