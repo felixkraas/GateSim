@@ -6,7 +6,7 @@ package de.germanspacebuild.gatesim.circuit;
  *
  * @author Felix
  */
-public class GateConnector implements IConnector {
+public class GateConnector implements IConnector, CircuitItem {
     private GateConnectionPoint start;
     private GateConnectionPoint destination;
 

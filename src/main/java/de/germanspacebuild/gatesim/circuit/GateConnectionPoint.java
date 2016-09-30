@@ -8,7 +8,7 @@ import de.germanspacebuild.gatesim.gates.Gate;
  *
  * @author Felix
  */
-public class GateConnectionPoint {
+public class GateConnectionPoint implements CircuitItem {
 
     private boolean value = false;
     private Gate gate;
