@@ -19,7 +19,6 @@ public abstract class Gate implements CircuitItem {
     public Gate(boolean inputA, boolean inputB) {
         this.inputA = new GateConnectionPoint(inputA);
         this.inputB = new GateConnectionPoint(inputB);
-        this.output = new GateConnectionPoint(false);
     }
 
     public abstract void process();
@@ -50,6 +49,22 @@ public abstract class Gate implements CircuitItem {
 
     public GateType getType() {
         return type;
+    }
+
+    public GateConnectionPoint getInputAPoint() {
+        return inputA;
+    }
+
+    public GateConnectionPoint getInputBPoint() {
+        return inputB;
+    }
+
+    public GateConnectionPoint getOutputPoint() {
+        return output;
+    }
+
+    public void setOutputPoint(GateConnectionPoint outputPoint) {
+        this.output = outputPoint;
     }
 
     @Override

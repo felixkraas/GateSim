@@ -30,4 +30,9 @@ public class GateConnector implements IConnector, CircuitItem {
     public void setDestination(GateConnectionPoint destination) {
         this.destination = destination;
     }
+
+    @Override
+    public void addDestination(GateConnectionPoint destination) {
+        setDestination(destination);
+    }
 }

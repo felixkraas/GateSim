@@ -7,4 +7,10 @@ package de.germanspacebuild.gatesim.circuit;
  * @author Felix
  */
 public interface IConnector {
+
+    GateConnectionPoint getStart();
+
+    void setStart(GateConnectionPoint start);
+
+    void addDestination(GateConnectionPoint destination);
 }
