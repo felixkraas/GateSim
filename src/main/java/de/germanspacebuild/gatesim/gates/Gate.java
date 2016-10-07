@@ -1,6 +1,6 @@
 package de.germanspacebuild.gatesim.gates;
 
-import de.germanspacebuild.gatesim.circuit.CircuitItem;
+import de.germanspacebuild.gatesim.circuit.ICircuitItem;
 import de.germanspacebuild.gatesim.circuit.GateConnectionPoint;
 
 /**
@@ -9,7 +9,7 @@ import de.germanspacebuild.gatesim.circuit.GateConnectionPoint;
  *
  * @author Felix
  */
-public abstract class Gate implements CircuitItem {
+public abstract class Gate implements ICircuitItem {
 
     protected GateType type;
     private GateConnectionPoint inputA;

@@ -10,7 +10,7 @@ import java.util.List;
  *
  * @author Felix
  */
-public class GateConnectorMulti implements IConnector, CircuitItem {
+public class GateConnectorMulti implements IConnector, ICircuitItem {
     private GateConnectionPoint start;
     private List<GateConnectionPoint> destinations = new ArrayList<>();
 
