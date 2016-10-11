@@ -1,5 +1,6 @@
 package de.germanspacebuild.gatesim.circuit;
 
+import de.germanspacebuild.gatesim.exceptions.GateNotInCircuitException;
 import de.germanspacebuild.gatesim.gates.Gate;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class Circuit {
                 return connection;
             }
         }
-        return null;
+        throw new GateNotInCircuitException("Gate " + gate + " is not part of the circuit.");
     }
 
     public void addConnection(IConnector connector) {
