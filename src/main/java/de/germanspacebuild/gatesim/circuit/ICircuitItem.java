@@ -6,5 +6,5 @@ package de.germanspacebuild.gatesim.circuit;
  *
  * @author Felix
  */
-public interface CircuitItem {
+public interface ICircuitItem {
 }
