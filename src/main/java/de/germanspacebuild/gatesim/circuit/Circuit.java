@@ -24,7 +24,7 @@ public class Circuit {
     /**
      * Returns connector that starts at the mentioned gate.
      *
-     * @param gate ´Gate the connector starts at
+     * @param gate Gate the connector starts at
      * @return Connector that starts at the gate
      */
     public IConnector connectorByGate(Gate gate) {
@@ -36,6 +36,11 @@ public class Circuit {
         throw new GateNotInCircuitException("Gate " + gate + " is not part of the circuit.");
     }
 
+    /**
+     * Returns list of all {@link GateConnectionPoint} that are inputs of the circuit.
+     *
+     * @return List of all input points of circuit
+     */
     public List<GateConnectionPoint> getCircuitInputPoints() {
         List<GateConnectionPoint> points = new ArrayList<>();
         List<GateConnectionPoint> outputs = new ArrayList<>();
@@ -49,8 +54,7 @@ public class Circuit {
         for (Gate gate : gates) {
             if (!outputs.contains(gate.getInputAPoint())) {
                 points.add(gate.getInputAPoint());
-            } else if (!outputs.contains(gate.getInputBPoint())) ;
-            {
+            } else if (!outputs.contains(gate.getInputBPoint())) {
                 points.add(gate.getInputBPoint());
             }
         }
