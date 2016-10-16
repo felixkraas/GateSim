@@ -15,7 +15,11 @@ import java.util.List;
 public class Circuit {
 
     private List<IConnector> connections = new ArrayList<>();
+    private List<Gate> gates = new ArrayList<>();
 
+    public Circuit(Gate gate) {
+        gates.add(gate);
+    }
 
     public IConnector connectorByGate(Gate gate) {
         for (IConnector connection : connections) {
@@ -30,11 +34,19 @@ public class Circuit {
         connections.add(connector);
     }
 
+    public void addGate(Gate gate) {
+        gates.add(gate);
+    }
+
     public void removeConnection(IConnector connection) {
         connections.remove(connection);
     }
 
     public List<IConnector> getConnections() {
         return connections;
+    }
+
+    public List<Gate> getGates() {
+        return gates;
     }
 }

@@ -13,6 +13,7 @@ public class GateConnectionBuilder {
     public static void connectGatesToCircuit(Gate gateA, Gate gateB, Circuit circuit) {
         if (gateA.getOutputPoint() == null) {
             gateA.setOutputPoint(new GateConnectionPoint(false, gateA));
+            circuit.addGate(gateB);
         } else {
             if (circuit.connectorByGate(gateA) instanceof GateConnector) {
                 GateConnectorMulti connectorMulti = new GateConnectorMulti(((GateConnector) circuit.connectorByGate(gateA)));
@@ -22,6 +23,7 @@ public class GateConnectionBuilder {
             } else {
                 circuit.connectorByGate(gateA).addDestination(gateB.getInputAPoint());
             }
+            circuit.addGate(gateB);
         }
     }
 
