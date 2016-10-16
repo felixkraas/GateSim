@@ -1,7 +1,7 @@
 package de.germanspacebuild.gatesim.gates;
 
-import de.germanspacebuild.gatesim.circuit.ICircuitItem;
 import de.germanspacebuild.gatesim.circuit.GateConnectionPoint;
+import de.germanspacebuild.gatesim.circuit.ICircuitItem;
 
 /**
  * Created by Felix on 23.09.2016
