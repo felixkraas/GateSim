@@ -13,4 +13,8 @@ public interface IConnector {
     void setStart(GateConnectionPoint start);
 
     void addDestination(GateConnectionPoint destination);
+
+    boolean isDestination(GateConnectionPoint connectionPoint);
+
+    boolean isStart(GateConnectionPoint connectionPoint);
 }

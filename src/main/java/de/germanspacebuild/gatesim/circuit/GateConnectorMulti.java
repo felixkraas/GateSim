@@ -24,6 +24,16 @@ public class GateConnectorMulti implements IConnector, ICircuitItem {
         this.destinations.add(connector.getDestination());
     }
 
+    @Override
+    public boolean isDestination(GateConnectionPoint connectionPoint) {
+        return destinations.contains(connectionPoint);
+    }
+
+    @Override
+    public boolean isStart(GateConnectionPoint connectionPoint) {
+        return start == connectionPoint;
+    }
+
     public void addDestination(GateConnectionPoint destination) {
         this.destinations.add(destination);
     }

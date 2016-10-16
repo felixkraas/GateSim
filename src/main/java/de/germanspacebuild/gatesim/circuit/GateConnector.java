@@ -15,6 +15,16 @@ public class GateConnector implements IConnector, ICircuitItem {
         this.destination = destination;
     }
 
+    @Override
+    public boolean isDestination(GateConnectionPoint connectionPoint) {
+        return destination == connectionPoint;
+    }
+
+    @Override
+    public boolean isStart(GateConnectionPoint connectionPoint) {
+        return start == connectionPoint;
+    }
+
     public GateConnectionPoint getStart() {
         return start;
     }
