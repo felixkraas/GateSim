@@ -1,2 +1,2 @@
 # GateSim
-Program to simulate and display ICs
+Program to simulate and display IC's
