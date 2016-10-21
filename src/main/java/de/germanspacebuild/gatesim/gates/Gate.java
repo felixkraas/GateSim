@@ -16,9 +16,10 @@ public abstract class Gate implements ICircuitItem {
     private GateConnectionPoint inputB;
     private GateConnectionPoint output;
 
-    public Gate(boolean inputA, boolean inputB) {
+    public Gate(boolean inputA, boolean inputB, GateType type) {
         this.inputA = new GateConnectionPoint(inputA);
         this.inputB = new GateConnectionPoint(inputB);
+        this.type = type;
     }
 
     public abstract void process();
