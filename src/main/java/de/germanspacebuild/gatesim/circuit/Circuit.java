@@ -37,7 +37,7 @@ public class Circuit {
     }
 
     /**
-     * Returns list of all {@link GateConnectionPoint} that are inputs of the circuit.
+     * Returns list of all {@link GateConnectionPoint}s that are inputs of the circuit.
      *
      * @return List of all input points of circuit
      */
