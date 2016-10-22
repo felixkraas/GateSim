@@ -15,13 +15,13 @@ import static org.lwjgl.glfw.GLFW.*;
 public class DisplayManager {
 
     public static long windowID;
-    private static GLFWErrorCallback errorCallback;
+    public static GLFWErrorCallback errorCallback;
 
     public static void createDisplay() {
 
         glfwInit();
-
-        glfwSetErrorCallback(errorCallback = GLFWErrorCallback.createPrint(System.err));
+        errorCallback = GLFWErrorCallback.createPrint(System.err);
+        glfwSetErrorCallback(errorCallback);
 
         glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
