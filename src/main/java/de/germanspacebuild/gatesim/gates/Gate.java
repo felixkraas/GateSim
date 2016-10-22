@@ -11,7 +11,7 @@ import de.germanspacebuild.gatesim.circuit.ICircuitItem;
  */
 public abstract class Gate implements ICircuitItem {
 
-    protected GateType type;
+    private final GateType type;
     private GateConnectionPoint inputA;
     private GateConnectionPoint inputB;
     private GateConnectionPoint output;
