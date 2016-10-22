@@ -1,5 +1,7 @@
 package de.germanspacebuild.gatesim.gates;
 
+import de.germanspacebuild.gatesim.circuit.GateConnectionPoint;
+
 /**
  * Created by Felix on 22.10.2016
  * for GateSim
@@ -14,6 +16,6 @@ public class GateAND extends Gate {
 
     @Override
     public void process() {
-        setOutput(getInputAPoint().read() && getInputBPoint().read());
+        setOutputPoint(new GateConnectionPoint(getInputAPoint().read() && getInputBPoint().read()));
     }
 }
