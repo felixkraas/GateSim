@@ -45,6 +45,15 @@ public class DisplayManager {
         glfwSwapInterval(1);
     }
 
+    public static void resizeWindow(int width, int height) {
+        glfwSetWindowSize(windowID, width, height);
+        glfwSetWindowAspectRatio(windowID, width, height);
+    }
+
+    public static void setWindowTitle(String title) {
+        glfwSetWindowTitle(windowID, title);
+    }
+
     public static void closeDisplay() {
         glfwDestroyWindow(windowID);
     }
