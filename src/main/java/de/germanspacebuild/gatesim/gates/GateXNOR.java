@@ -14,6 +14,10 @@ public class GateXNOR extends Gate {
         super(inputA, inputB, GateType.XNOR);
     }
 
+    public GateXNOR() {
+        super(GateType.XNOR);
+    }
+
     @Override
     public void process() {
         setOutputPoint(new GateConnectionPoint(getInputAPoint().read() == getInputBPoint().read()));

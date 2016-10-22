@@ -14,6 +14,10 @@ public class GateAND extends Gate {
         super(inputA, inputB, GateType.AND);
     }
 
+    public GateAND() {
+        super(GateType.AND);
+    }
+
     @Override
     public void process() {
         setOutputPoint(new GateConnectionPoint(getInputAPoint().read() && getInputBPoint().read()));

@@ -14,6 +14,10 @@ public class GateNOR extends Gate {
         super(inputA, inputB, GateType.NOR);
     }
 
+    public GateNOR() {
+        super(GateType.NOR);
+    }
+
     @Override
     public void process() {
         setOutputPoint(new GateConnectionPoint(!(getInputAPoint().read() | getInputBPoint().read())));

@@ -14,6 +14,10 @@ public class GateXOR extends Gate {
         super(inputA, inputB, GateType.XOR);
     }
 
+    public GateXOR() {
+        super(GateType.XOR);
+    }
+
     @Override
     public void process() {
         setOutputPoint(new GateConnectionPoint(getInputAPoint().read() ^ getInputBPoint().read()));

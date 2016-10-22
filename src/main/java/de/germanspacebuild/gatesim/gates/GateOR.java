@@ -14,6 +14,10 @@ public class GateOR extends Gate {
         super(inputA, inputB, GateType.OR);
     }
 
+    public GateOR() {
+        super(GateType.OR);
+    }
+
     @Override
     public void process() {
         setOutputPoint(new GateConnectionPoint(getInputAPoint().read() || getInputBPoint().read()));

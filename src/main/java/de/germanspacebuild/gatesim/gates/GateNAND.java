@@ -14,6 +14,10 @@ public class GateNAND extends Gate {
         super(inputA, inputB, GateType.NAND);
     }
 
+    public GateNAND() {
+        super(GateType.NAND);
+    }
+
     @Override
     public void process() {
         setOutputPoint(new GateConnectionPoint(!(getInputAPoint().read() & getInputBPoint().read())));
