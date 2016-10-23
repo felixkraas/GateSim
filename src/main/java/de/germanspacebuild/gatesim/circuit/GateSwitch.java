@@ -30,4 +30,10 @@ public class GateSwitch implements ICircuitItem {
         this.output.write(output);
     }
 
+    @Override
+    public String toString() {
+        return "GateSwitch{" +
+                "state=" + output +
+                '}';
+    }
 }

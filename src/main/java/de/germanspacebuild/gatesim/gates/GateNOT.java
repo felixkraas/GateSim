@@ -23,4 +23,13 @@ public class GateNOT extends Gate {
         setInputB(getInputAPoint().read());
         setOutputPoint(new GateConnectionPoint(!getInputAPoint().read()));
     }
+
+    @Override
+    public String toString() {
+        return "Gate{" +
+                "type=" + getType() +
+                ", inputA=" + getInputAPoint() +
+                ", output=" + getOutputPoint() +
+                '}';
+    }
 }

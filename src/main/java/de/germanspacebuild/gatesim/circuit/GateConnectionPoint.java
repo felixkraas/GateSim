@@ -42,6 +42,7 @@ public class GateConnectionPoint implements ICircuitItem {
     public String toString() {
         return "GateConnectionPoint{" +
                 "value=" + value +
+                ", gate=" + gate +
                 '}';
     }
 }
