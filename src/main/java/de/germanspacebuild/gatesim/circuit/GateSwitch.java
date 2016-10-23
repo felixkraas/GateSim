@@ -14,6 +14,10 @@ public class GateSwitch implements ICircuitItem {
         output = new GateConnectionPoint(false);
     }
 
+    public GateSwitch(boolean value) {
+        output = new GateConnectionPoint(value);
+    }
+
     public void switchState() {
         output.write(!output.read());
     }
