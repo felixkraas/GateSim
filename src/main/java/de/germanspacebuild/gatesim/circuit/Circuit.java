@@ -22,6 +22,14 @@ public class Circuit {
     }
 
     /**
+     * Main logic for the circuit.
+     * Goes through all gates by their order in the circuit and processes them.
+     */
+    public void resolve() {
+
+    }
+
+    /**
      * Returns connector that starts at the mentioned gate.
      *
      * @param gate Gate the connector starts at
